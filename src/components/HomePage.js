@@ -31,17 +31,7 @@ function HomePage({ handleUserInput, handleClick, userInput, videos }) {
       <div class="results">
         <p>No Search Results Yet!, Please submit a search above!</p>
       </div>
-      {/* <div className="results">
-        {videos.length > 0 ? (
-          <div>
-            {videos.map((video) => (
-              <VideoCards key={video.id} video={video} />
-            ))}
-          </div>
-        ) : (
-          <p>No Search Results Yet! Please submit a search above!</p>
-        )}
-      </div> */}
+      <></>
     </div>
   );
 }
