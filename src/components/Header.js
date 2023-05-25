@@ -1,7 +1,7 @@
 import React from "react";
 // import useState from "react"
 
-function HomePage() {
+function Header() {
     
     return (
         <section className="home-page">
@@ -14,4 +14,4 @@ function HomePage() {
     );
 }
   
-export default HomePage;
+export default Header;
