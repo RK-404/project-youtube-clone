@@ -1,0 +1,38 @@
+.credits {
+    font-family: sans-serif, Arial, Helvetica;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.inner {
+    display: flex;
+    flex-direction: row;
+}
+
+.credit {
+    margin: 15px;
+    background-color: #b4fde5;
+    border-radius: 6px;
+    box-shadow: 4px 4px 8px 0px #454545cc;
+    padding: 20px;
+}
+
+.title {
+    background-color: #b4fde5;
+    border-radius: 5px;
+    box-shadow: 4px 4px 8px 4px #454545cc;
+    color: #ff0000;
+    padding: 15px 170px 15px 170px;
+    text-decoration: underline;
+}
+
+.links {
+    line-height: 25px;
+}
+
+a {
+    color: #ff0000;
+    text-decoration: none;
+}
