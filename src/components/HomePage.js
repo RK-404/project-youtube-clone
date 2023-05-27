@@ -6,13 +6,13 @@ function HomePage({ handleUserInput, handleClick, userInput, videos }) {
 
   
   return (
-    <div class="search-bar-container">
-      <div class="input-group mb-3">
+    <div className="search-bar-container">
+      <div className="input-group mb-3">
         <input
           onChange={handleUserInput}
           value={userInput}
           type="text"
-          class="form-control"
+          className="form-control"
           placeholder="Search..."
           aria-label="Search"
           aria-describedby="button-addon2"
@@ -20,7 +20,7 @@ function HomePage({ handleUserInput, handleClick, userInput, videos }) {
         <button
           onClick={handleClick}
           value={userInput}
-          class="btn btn-danger"
+          className="btn btn-danger"
           type="button"
           id="button-addon2"
           style={{ color: "white" }}
@@ -28,7 +28,7 @@ function HomePage({ handleUserInput, handleClick, userInput, videos }) {
           Search
         </button>
       </div>
-      <div class="results">
+      <div className="results">
         <p>No Search Results Yet!, Please submit a search above!</p>
       </div>
       <></>

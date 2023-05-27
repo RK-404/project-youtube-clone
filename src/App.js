@@ -1,23 +1,25 @@
-import logo from './logo.svg';
 import './App.css';
+import React from "react";
+import NavBar from './components/NavBar';
+import HomePage from './components/HomePage';
+import About from './components/About';
 
 function App() {
+
+  // const apiKey = process.env.REACT_APP_API_KEY;
+
+  // fetch(`https://youtube.googleapis.com/youtube/v3/search?key=${apiKey}`)
+  // .then(response => response.json())
+  // .then(response => console.log(response))
+  // .catch(err => {});
+
+  //https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${searchKey}&type=video&key=${apiKey}
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <NavBar/>
+      <HomePage/>
+      <About/>
     </div>
   );
 }
