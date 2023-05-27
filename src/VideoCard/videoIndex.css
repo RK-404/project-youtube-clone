@@ -1,0 +1,11 @@
+.indexPage {
+    display: grid;
+    gap: 40px;
+    grid-template-columns: repeat(2,400px);   
+    justify-content: center;  
+}
+
+.image {
+    width: 400px;
+    height: 250px;
+}
