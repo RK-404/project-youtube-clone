@@ -4,6 +4,7 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    margin-top: 50px;
 }
 
 .inner {
@@ -17,6 +18,7 @@
     border-radius: 6px;
     box-shadow: 4px 4px 8px 0px #454545cc;
     padding: 20px;
+    width: 280px;
 }
 
 .title {
@@ -24,15 +26,26 @@
     border-radius: 5px;
     box-shadow: 4px 4px 8px 4px #454545cc;
     color: #ff0000;
-    padding: 15px 170px 15px 170px;
+    font-weight: bold;
+    padding: 15px 240px 15px 240px;
     text-decoration: underline;
 }
 
 .links {
-    line-height: 25px;
+    font-size: 20px;
+    line-height: 35px;
 }
 
-a {
+.names {
+    font-weight: bold;
+}
+
+/* a {
+    color: #ff0000;
+    text-decoration: none;
+} */
+
+a:hover {
     color: #ff0000;
     text-decoration: none;
 }
