@@ -28,10 +28,12 @@
     color: #ff0000;
     font-weight: bold;
     padding: 15px 240px 15px 240px;
+    padding: 15px 170px 15px 170px;
     text-decoration: underline;
 }
 
 .links {
+
     font-size: 20px;
     line-height: 35px;
 }
@@ -46,6 +48,10 @@
 } */
 
 a:hover {
+    line-height: 25px;
+}
+
+a {
     color: #ff0000;
     text-decoration: none;
 }

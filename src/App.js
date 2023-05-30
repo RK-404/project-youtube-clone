@@ -1,4 +1,5 @@
 
+
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
@@ -6,6 +7,11 @@ import './App.css';
 import Navbar from './components/NavBar';
 import AboutPage from './components/AboutPage';
 
+import './App.css';
+import React from "react";
+// import NavBar from './components/NavBar';
+// import HomePage from './components/HomePage';
+import About from './components/About';
 
 function App() {
 
@@ -25,10 +31,10 @@ function App() {
       <Navbar/>
       <Routes>
         <Route path="/about" element={<AboutPage/>} />
-        
       </Routes>
       </Router>
-
+      {/* <HomePage/>
+      <About/> */}
     </div>
   );
 }
