@@ -1,17 +1,11 @@
-<<<<<<< HEAD
+
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 
 import './App.css';
 import Navbar from './components/NavBar';
 import AboutPage from './components/AboutPage';
-=======
-import './App.css';
-import React from "react";
-import NavBar from './components/NavBar';
-import HomePage from './components/HomePage';
-import About from './components/About';
->>>>>>> refs/remotes/origin/main
+
 
 function App() {
 
@@ -26,7 +20,7 @@ function App() {
 
   return (
     <div className="App">
-<<<<<<< HEAD
+
       <Router>
       <Navbar/>
       <Routes>
@@ -34,11 +28,7 @@ function App() {
         
       </Routes>
       </Router>
-=======
-      <NavBar/>
-      <HomePage/>
-      <About/>
->>>>>>> refs/remotes/origin/main
+
     </div>
   );
 }
