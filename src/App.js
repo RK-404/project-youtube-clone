@@ -2,7 +2,7 @@ import './App.css';
 import React from "react";
 import NavBar from './components/NavBar';
 import HomePage from './components/HomePage';
-import About from './components/About';
+import AboutPage from './components/AboutPage';
 
 function App() {
 
@@ -19,7 +19,7 @@ function App() {
     <div className="App">
       <NavBar/>
       <HomePage/>
-      <About/>
+      <AboutPage/>
     </div>
   );
 }

@@ -1,6 +1,6 @@
-import './about.css';
+import './AboutPage.css';
 
-function NavBar() {
+function AboutPage() {
     return (
         <div className="credits">
             <h2 className='title'>Credits</h2>
@@ -38,6 +38,6 @@ function NavBar() {
             </div>
         </div>
     );
-  }
+}
   
-  export default NavBar;
+  export default AboutPage;
