@@ -1,0 +1,25 @@
+.showVid-main {
+    display: flex;
+    justify-content: center;
+    gap: 5%;
+}
+
+.showVid {
+    padding-bottom: 15%;
+}
+.showVid-side {
+    /* flex: .3; */
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.showVid-image {
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+}
+
+.showVid-p {
+    width: 200px;
+}
