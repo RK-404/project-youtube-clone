@@ -1,23 +1,29 @@
-import logo from './logo.svg';
+import React from 'react';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import './App.css';
+import NavBar from './components/NavBar';
+import HomePage from './components/HomePage';
+import AboutPage from './components/AboutPage';
 
 function App() {
+
+  // const apiKey = process.env.REACT_APP_API_KEY;
+
+  // fetch(`https://youtube.googleapis.com/youtube/v3/search?key=${apiKey}`)
+  // .then(response => response.json())
+  // .then(response => console.log(response))
+  // .catch(err => {});
+
+  //https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${searchKey}&type=video&key=${apiKey}
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+     <Router>
+      <NavBar/>
+      <Routes>
+        <Route path="/about" element={<AboutPage/>} />
+      </Routes>
+      </Router>
     </div>
   );
 }
