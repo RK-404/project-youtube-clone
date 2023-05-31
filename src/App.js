@@ -1,31 +1,49 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import './App.css';
 import NavBar from './components/NavBar';
 import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
+import Video from './components/VideoCard/Video';
+import VideoIndex from './components/VideoCard/VideoIndex';
+
+import './App.css';
+import { useEffect, useState } from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 
 function App() {
+  const [allVideo, setAllVideo] = useState([])
+  const [searchInput, setSearchInput] = useState("")
 
-  // const apiKey = process.env.REACT_APP_API_KEY;
+  useEffect(() => {
+    const apiKey = process.env.REACT_APP_API_KEY
+    fetch(`https://youtube.googleapis.com/youtube/v3/search?key=${apiKey}&part=snippet&type=video`)
+    .then((response) => response.json())
+    .then((response) => setAllVideo(response.items))
+    .catch((error) => console.log(error))
+  },[])
 
-  // fetch(`https://youtube.googleapis.com/youtube/v3/search?key=${apiKey}`)
-  // .then(response => response.json())
-  // .then(response => console.log(response))
-  // .catch(err => {});
+  function handleInput(event) {
+    setSearchInput(event.target.value)
+  }
 
-  //https://www.googleapis.com/youtube/v3/search?part=snippet&maxResults=10&q=${searchKey}&type=video&key=${apiKey}
-
+  function handleSearch(event) {
+    event.preventDefault()
+    handleInput()
+    setSearchInput("")
+  }
+  
   return (
-    <div className="App">
-     <Router>
-      <NavBar/>
-      <Routes>
-        <Route path="/about" element={<AboutPage/>} />
-      </Routes>
+    <div>
+      <Router>
+        <NavBar handleInput={handleInput} handleSearch={handleSearch} searchInput={searchInput}/>
+        <HomePage/>
+        <Routes>
+          <Route path='/' element={<VideoIndex allVideo={allVideo} />} />
+          <Route path='/videos/:id' element={<Video allVideo={allVideo}/>}/> 
+          <Route path="/about" element={<AboutPage/>} />
+        </Routes>
       </Router>
     </div>
-  );
+  )
 }
 
 export default App;
