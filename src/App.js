@@ -14,7 +14,7 @@ function App() {
   const [searchInput, setSearchInput] = useState("")
 
   useEffect(() => {
-    const apiKey = process.env.REACT_APP_API_KEY
+    const apiKey = process.env.REACT_APP_API_KEY;
     fetch(`https://youtube.googleapis.com/youtube/v3/search?key=${apiKey}&part=snippet&type=video`)
     .then((response) => response.json())
     .then((response) => setAllVideo(response.items))
