@@ -1,26 +1,28 @@
 // import React from "react"
 
+import { Link } from "react-router-dom";
+
 
 function NavBar() {
     return (
       <nav className="navbar navbar-expand-lg navbar-light bg-danger">
         <div className="container-fluid">
-          <a className="navbar-brand" href="/" style={{ color: "white" }}>
-            Youtube
-          </a>
+          <Link className="navbar-brand" to="/" style={{ color: "white", fontWeight: "bold"}}>
+            YouTube
+          </Link>
           <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div className="navbar-nav">
-              <a
+              <Link
                 className="nav-link active"
                 aria-current="page"
-                href="/"
+                to="/"
                 style={{ color: "white" }}
               >
                 Home
-              </a>
-              <a className="nav-link" href="/about" style={{ color: "white" }}>
+              </Link>
+              <Link className="nav-link" to="/about" style={{ color: "white" }}>
                 About
-              </a>
+              </Link>
             </div>
           </div>
         </div>
