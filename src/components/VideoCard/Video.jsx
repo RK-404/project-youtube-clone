@@ -15,32 +15,34 @@ function Video({allVideo}) {
        autoplay: 1,
      },
    };
- const _onReady = (event) =>  {
+   const _onReady = (event) =>  {
      // access to player in all event handlers via event.target
      event.target.pauseVideo();
    }
          
-   return (
+  return (
    
-     <div className='showVid-main'>
+    <div className='showVid-main'>
         <div>
          <YouTube className='showVid' videoId={id} opts={opts} onReady={_onReady} />
          <hr />
          <Form/>
         </div>
-         <div >           
-            {allVideo.map(vid => {
-                return (
-                    <div key={vid.id.videoId} className='showVid-side'>                   
-                      <Link to={`/videos/${vid.id.videoId}`}>
-                        <img className="showVid-image" src={vid.snippet.thumbnails.high.url} alt="" />
-                        <p className='showVid-p'>{vid.snippet.title}</p>                                  
-                        </Link> 
-                    </div>
-                )
-            })}   
-          </div>
-     </div>
+        <div >           
+          {allVideo.map(vid => {
+              return (
+                <div key={vid.id.videoId} className='showVid-side'>                   
+                  <Link to={`/videos/${vid.id.videoId}`}>
+                    <img className="showVid-image" src={vid.snippet.thumbnails.high.url} alt="" />                             
+                  </Link>
+                  <Link to={`/videos/${vid.id.videoId}`}>
+                    <p className='showVid-p'>{vid.snippet.title}</p>
+                  </Link>
+                </div>
+              )
+          })}   
+        </div>
+    </div>
   
   )
           
