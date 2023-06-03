@@ -7,11 +7,13 @@ function VideoIndex({allVideo}) {
         <div className="indexPage">           
             {allVideo.map(vid => {
                 return (
-                    <div>                   
+                    <div key={vid.id.videoId}>                   
                        <Link to={`/videos/${vid.id.videoId}`}>
-                        <img className="image" src={vid.snippet.thumbnails.high.url} alt="" />
-                        </Link> 
-                        <p>{vid.snippet.title}</p>                                  
+                         <img className="image" src={vid.snippet.thumbnails.high.url} alt="" />
+                       </Link>                                  
+                       <Link to={`/videos/${vid.id.videoId}`}>
+                        <p>{vid.snippet.title}</p>
+                       </Link>
                     </div>
                 )
             })}   
