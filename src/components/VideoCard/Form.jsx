@@ -4,15 +4,14 @@ import './form.css'
 
 function Form() {
     const [input, setInput] = useState([])
-
+    let id= 100
     function handleSubmit(e) {
         e.preventDefault()
-        console.log(e.target.name.value);
-        console.log(e.target.comment.value);
         setInput([...input, {name: e.target.name.value, comment: e.target.comment.value}])
         e.target.name.value = ""
         e.target.comment.value = ""
     }
+
 
 
     return (
@@ -24,7 +23,7 @@ function Form() {
             <button>Submit</button>
             <hr />
             {input.map(el => 
-            <div className='comment-box'>
+            <div key={id++} className='comment-box'>
                 <h4>{el.name}</h4> 
                 <p>{el.comment}</p>
                 <hr />

@@ -34,8 +34,8 @@ function Video({allVideo}) {
                     <div key={vid.id.videoId} className='showVid-side'>                   
                       <Link to={`/videos/${vid.id.videoId}`}>
                         <img className="showVid-image" src={vid.snippet.thumbnails.high.url} alt="" />
-                        </Link> 
                         <p className='showVid-p'>{vid.snippet.title}</p>                                  
+                        </Link> 
                     </div>
                 )
             })}   
