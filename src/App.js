@@ -39,11 +39,15 @@ function App() {
       handleSearch();
     }
   }
+
+  function resetVideos() {
+    setAllVideo([]);
+  }
   
   return (
     <div>
       <Router>
-        <NavBar/>
+        <NavBar resetVideos={resetVideos} />
         <Routes>
           <Route path='/' element={
             <HomePage
