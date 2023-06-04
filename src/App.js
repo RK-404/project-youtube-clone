@@ -25,13 +25,20 @@ function App() {
   }
 
   function handleSearch(event) {
-    event.preventDefault();
-    fetch(`https://www.googleapis.com/youtube/v3/search?q=${search}&key=${apiKey}&part=snippet&type=video&maxResults=20`)
-    .then(response => response.json())
-    .then(response => setAllVideo(response.items))
-    .catch((error) => console.log(error));
-
+    // event.preventDefault();
+    if (search) {
+      fetch(`https://www.googleapis.com/youtube/v3/search?q=${search}&key=${apiKey}&part=snippet&type=video&maxResults=20`)
+      .then(response => response.json())
+      .then(response => setAllVideo(response.items))
+      .catch((error) => console.log(error));
+    }
     setSearch("");
+  }
+
+  function handleEnter(event) {
+    if (event.keyCode === 13) {
+      handleSearch();
+    }
   }
   
   return (
@@ -41,6 +48,7 @@ function App() {
         <HomePage
           handleUserInput={handleInput}
           handleClick={handleSearch}
+          handleEnter={handleEnter}
           userInput={search}
           videos={allVideo}
         />
