@@ -1,7 +1,8 @@
 .indexPage {
     display: grid;
     gap: 40px;
-    grid-template-columns: repeat(2,400px);   
+    grid-template-columns: repeat(2,400px);
+    margin-top: 30px;
     justify-content: center;  
 }
 

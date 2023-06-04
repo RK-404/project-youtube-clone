@@ -1,10 +1,6 @@
 import "./HomePage.css";
 
-import React from "react";
-
 function HomePage({ handleUserInput, handleClick, userInput, videos }) {
-
-  
   return (
     <div className="search-bar-container">
       <div className="input-group mb-3">
@@ -28,10 +24,9 @@ function HomePage({ handleUserInput, handleClick, userInput, videos }) {
           Search
         </button>
       </div>
-      <div className="results">
+      {!videos.length &&  <div className="results">
         <p>No Search Results Yet!, Please submit a search above!</p>
-      </div>
-      <></>
+      </div>}
     </div>
   );
 }
