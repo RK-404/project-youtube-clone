@@ -1,11 +1,12 @@
 import "./HomePage.css";
 
-function HomePage({ handleUserInput, handleClick, userInput, videos }) {
+function HomePage({ handleUserInput, handleClick, handleEnter, userInput, videos }) {
   return (
     <div className="search-bar-container">
       <div className="input-group mb-3">
         <input
           onChange={handleUserInput}
+          onKeyDown={handleEnter}
           value={userInput}
           type="text"
           className="form-control"
