@@ -2,10 +2,15 @@
     display: flex;
     justify-content: center;
     gap: 5%;
+    margin-top: 30px;
 }
 
 .showVid {
-    padding-bottom: 15%;
+    padding-bottom: 15px;
+}
+
+.showVid-title {
+    padding-bottom: 25px;
 }
 .showVid-side {
     /* flex: .3; */
