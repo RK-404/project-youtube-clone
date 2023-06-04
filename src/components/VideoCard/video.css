@@ -10,7 +10,8 @@
 }
 
 .showVid-title {
-    padding-bottom: 25px;
+    padding-bottom: 25px; 
+    width: 800px;
 }
 .showVid-side {
     /* flex: .3; */
