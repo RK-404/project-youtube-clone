@@ -47,15 +47,14 @@ function App() {
     }
   }
 
+  function resetVideos() {
+    setAllVideo([]);
+  }
+  
   return (
     <div>
       <Router>
-        <NavBar />
-        {/* <Modal
-          setShowModal={setShowModal}
-          errorStatus={errorStatus}
-          showModal={showModal}
-        /> */}
+        <NavBar resetVideos={resetVideos} />
         <Routes>
           <Route
             path="/"
