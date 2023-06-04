@@ -12,7 +12,7 @@ function VideoIndex({allVideo}) {
                          <img className="image" src={vid.snippet.thumbnails.high.url} alt="" />
                        </Link>                                  
                        <Link to={`/videos/${vid.id.videoId}`}>
-                        <p>{vid.snippet.title}</p>
+                       <p dangerouslySetInnerHTML={{ __html: vid.snippet.title }} />
                        </Link>
                     </div>
                 )

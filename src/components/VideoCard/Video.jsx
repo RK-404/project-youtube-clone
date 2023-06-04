@@ -8,8 +8,8 @@ import './video.css'
 function Video({allVideo}) {
    let {id} = useParams()
    const opts = {
-     height: '390',
-     width: '640',
+     height: '450',
+     width: '800',
      playerVars: {
        // https://developers.google.com/youtube/player_parameters
        autoplay: 1,
@@ -19,12 +19,21 @@ function Video({allVideo}) {
      // access to player in all event handlers via event.target
      event.target.pauseVideo();
    }
+
+   const currentVideo = allVideo.find(vid => vid.id.videoId === id);
+
          
   return (
    
     <div className='showVid-main'>
         <div>
          <YouTube className='showVid' videoId={id} opts={opts} onReady={_onReady} />
+         {currentVideo ? 
+          (<div className='showVid-title'> 
+            <h4 dangerouslySetInnerHTML={{ __html: currentVideo.snippet.title }} /> 
+            <p>{currentVideo.snippet.channelTitle}</p>
+          </div>)
+          : null}
          <hr />
          <Form/>
         </div>
@@ -36,7 +45,7 @@ function Video({allVideo}) {
                     <img className="showVid-image" src={vid.snippet.thumbnails.high.url} alt="" />                             
                   </Link>
                   <Link to={`/videos/${vid.id.videoId}`}>
-                    <p className='showVid-p'>{vid.snippet.title}</p>
+                    <p className='showVid-p' dangerouslySetInnerHTML={{ __html: vid.snippet.title }} />
                   </Link>
                 </div>
               )
