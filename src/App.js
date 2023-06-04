@@ -2,7 +2,6 @@ import NavBar from './components/NavBar';
 import HomePage from './components/HomePage';
 import AboutPage from './components/AboutPage';
 import Video from './components/VideoCard/Video';
-import VideoIndex from './components/VideoCard/VideoIndex';
 
 import './App.css';
 import React, { useEffect, useState } from 'react';
@@ -45,15 +44,15 @@ function App() {
     <div>
       <Router>
         <NavBar/>
-        <HomePage
-          handleUserInput={handleInput}
-          handleClick={handleSearch}
-          handleEnter={handleEnter}
-          userInput={search}
-          videos={allVideo}
-        />
         <Routes>
-          <Route path='/' element={<VideoIndex allVideo={allVideo} />} />
+          <Route path='/' element={
+            <HomePage
+              handleUserInput={handleInput}
+              handleClick={handleSearch}
+              handleEnter={handleEnter}
+              userInput={search}
+              videos={allVideo}
+            />} />
           <Route path='/videos/:id' element={<Video allVideo={allVideo}/>}/> 
           <Route path="/about" element={<AboutPage/>} />
         </Routes>

@@ -1,4 +1,5 @@
 import "./HomePage.css";
+import VideoIndex from "./VideoCard/VideoIndex";
 
 function HomePage({ handleUserInput, handleClick, handleEnter, userInput, videos }) {
   return (
@@ -25,10 +26,12 @@ function HomePage({ handleUserInput, handleClick, handleEnter, userInput, videos
           Search
         </button>
       </div>
-      {!videos.length && (
+      {!videos.length ? (
         <div className="results">
           <p>No Search Results Yet!, Please submit a search above!</p>
         </div>
+      ) : (
+        <VideoIndex allVideo={videos} />
       )}
     </div>
   );
