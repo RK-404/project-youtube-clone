@@ -1,7 +1,14 @@
 import "./HomePage.css";
 import VideoIndex from "./VideoCard/VideoIndex";
 
-function HomePage({ handleUserInput, handleClick, handleEnter, userInput, videos }) {
+function HomePage({
+  handleUserInput,
+  handleClick,
+  handleEnter,
+  userInput,
+  videos,
+  showModal,
+}) {
   return (
     <div className="search-bar-container">
       <div className="input-group">
@@ -14,6 +21,7 @@ function HomePage({ handleUserInput, handleClick, handleEnter, userInput, videos
           placeholder="Search..."
           aria-label="Search"
           aria-describedby="button-addon2"
+          disabled={showModal}
         ></input>
         <button
           onClick={handleClick}
@@ -26,13 +34,15 @@ function HomePage({ handleUserInput, handleClick, handleEnter, userInput, videos
           Search
         </button>
       </div>
-      {!videos.length ? (
-        <div className="results">
+      <div className={`results ${videos.length > 0 ? "has-videos" : ""}`}>
+        {videos.length > 0 ? (
+          <div>
+            <VideoIndex allVideo={videos} />
+          </div>
+        ) : (
           <p>No Search Results Yet!, Please submit a search above!</p>
-        </div>
-      ) : (
-        <VideoIndex allVideo={videos} />
-      )}
+        )}
+      </div>
     </div>
   );
 }
