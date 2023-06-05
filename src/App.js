@@ -31,6 +31,10 @@ function App() {
         })
         .then((response) => {
           setAllVideo(response.items);
+          
+          if (allVideo.length === 0) {
+            setShowModal(true);
+          }
         })
         .catch((error) => {
           console.log(error);
