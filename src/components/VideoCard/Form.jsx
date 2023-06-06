@@ -1,5 +1,6 @@
 import { useState } from 'react';
 import './form.css'
+import Share from '../Share';
 
 
 function Form() {
@@ -29,6 +30,7 @@ function Form() {
                 <hr />
             </div>
             )}
+            <Share />
           </form>
     )
 }
