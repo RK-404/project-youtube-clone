@@ -30,10 +30,11 @@ function App() {
           return response.json();
         })
         .then((response) => {
-          setAllVideo(response.items);
-          
-          if (allVideo.length === 0) {
+          if (response.items.length === 0) {
             setShowModal(true);
+          } else {
+            setAllVideo(response.items);
+            setShowModal(false);
           }
         })
         .catch((error) => {
