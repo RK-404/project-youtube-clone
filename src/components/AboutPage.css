@@ -1,51 +1,46 @@
-.credits {
-    font-family: sans-serif, Arial, Helvetica;
+.about-page {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
-    margin-top: 50px;
+    align-items: center;
+    font-family: sans-serif, Arial, Helvetica;
 }
 
-.inner {
+.about-title {
+    margin-top: 70px;
+    /* text-align: center; */
+    font-weight: bold;
+}
+
+.project-title {
+    font-family: 'Times New Roman', Times, serif;
+    margin-top: 70px;
+    text-align: center;
+}
+
+.credits {
     display: flex;
     flex-direction: row;
 }
 
-.credit {
+.individual {
     margin: 15px;
-    background-color: #b4fde5;
-    border-radius: 6px;
-    box-shadow: 4px 4px 8px 0px #454545cc;
-    padding: 20px;
-    width: 280px;
+    width: 240px;
 }
 
-.title {
-    background-color: #b4fde5;
-    border-radius: 5px;
-    box-shadow: 4px 4px 8px 4px #454545cc;
-    color: #ff0000;
-    font-weight: bold;
-    padding: 15px 240px 15px 240px;
-    text-decoration: underline;
+img {
+    width: 240px;
+    margin-bottom: 15px;
 }
-
-.links {
-    font-size: 20px;
-    line-height: 35px;
-}
-
-.names {
-    font-weight: bold;
-}
-
-/* a {
-    color: #ff0000;
-    text-decoration: none;
-} */
 
 a:hover {
     color: #ff0000;
     text-decoration: none;
+}
+
+.project-description {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40em;
 }
