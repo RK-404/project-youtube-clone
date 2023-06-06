@@ -3,6 +3,7 @@ import HomePage from "./components/HomePage";
 import AboutPage from "./components/AboutPage";
 import Video from "./components/VideoCard/Video";
 import Modal from "./components/Modal";
+import NoVideos from "./components/NoVideos";
 
 import "./App.css";
 import React, { useState } from "react";
@@ -73,8 +74,7 @@ function App() {
               />
             }
           />
-
-          {/* <Route path="*" element={<Modal setShowModal={setShowModal} />} /> */}
+          <Route path="/*" element={<NoVideos />} />
           <Route path="/videos/:id" element={<Video allVideo={allVideo} />} />
           <Route path="/about" element={<AboutPage />} />
         </Routes>

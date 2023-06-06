@@ -1,0 +1,13 @@
+.no-videos-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(10, 9, 9);
+}
+
+.meme {
+  height: 90vh;
+  width: 80vw;
+  padding-top: 15px;
+}
+
