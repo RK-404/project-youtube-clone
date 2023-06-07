@@ -15,10 +15,10 @@ function Video({allVideo}) {
        autoplay: 1,
      },
    };
-   const _onReady = (event) =>  {
-     // access to player in all event handlers via event.target
-     event.target.pauseVideo();
-   }
+  //  const _onReady = (event) =>  {
+  //    // access to player in all event handlers via event.target
+  //    event.target.pauseVideo();
+  //  }
 
    const currentVideo = allVideo.find(vid => vid.id.videoId === id);
 
@@ -27,7 +27,7 @@ function Video({allVideo}) {
    
     <div className='showVid-main'>
         <div>
-         <YouTube className='showVid' videoId={id} opts={opts} onReady={_onReady} />
+         <YouTube className='showVid' videoId={id} opts={opts} />
          {currentVideo ? 
           (<div className='showVid-title'> 
             <h4 dangerouslySetInnerHTML={{ __html: currentVideo.snippet.title }} /> 
