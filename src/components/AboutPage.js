@@ -73,7 +73,7 @@ function AboutPage() {
                     <span><b>Team work:</b></span> This project <span>encouraged </span> and <span>taught</span> us to work as a <span>team.</span> The team had <span>open communication</span> and met on a regular basis to discuss the project.
                 </p>
                 <p className='description'>
-                    <span><b>Resolving Merges and Conflicts </b> on git-hub and VS code:</span> The <span>team worked/learned together</span> on <span>resolving merge conflicts</span> and developed a troube-free seamless method to date files from git-hub by making a pull request.
+                    <span><b>Resolving Merges and Conflicts </b> on git-hub and VS code:</span> The <span>team worked/learned together</span> on <span>resolving merge conflicts</span> and developed a troube-free seamless method to update files from git-hub by making a pull request.
                 </p>
             </div>
         </div>
