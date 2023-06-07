@@ -82,3 +82,18 @@ a:hover {
     font-size: 4em;
     line-height: 68px;
 }
+
+@media (max-width : 1060px) {
+    .credits {
+        flex-direction: column;
+    }
+    img {
+        width: 200px;
+        height: 250px;
+    }
+    .individual {
+        border: 2px solid #1976d2;
+        border-radius: 10px;
+        padding: 20px 20px 5px 18px;
+    }
+}
