@@ -9,9 +9,9 @@ import React, { useState } from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
+  const apiKey = process.env.REACT_APP_API_KEY;
   const [allVideo, setAllVideo] = useState([]);
   const [search, setSearch] = useState("");
-  const apiKey = process.env.REACT_APP_API_KEY;
   const [showModal, setShowModal] = useState(false);
 
   function handleInput(event) {
@@ -20,27 +20,26 @@ function App() {
 
   function handleSearch() {
     if (search) {
-      fetch(
-        `https://www.googleapis.com/youtube/v3/search?q=${search}&key=${apiKey}&part=snippet&type=video&maxResults=20`
-      )
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error("API request failed");
-          }
-          return response.json();
-        })
-        .then((response) => {
-          if (response.items.length === 0) {
-            setShowModal(true);
-          } else {
-            setAllVideo(response.items);
-            setShowModal(false);
-          }
-        })
-        .catch((error) => {
-          console.log(error);
+      fetch(`https://www.googleapis.com/youtube/v3/search?q=${search}&key=${apiKey}&part=snippet&type=video&maxResults=20`)
+      .then((response) => {
+        if (!response.ok) {
+          throw new Error("API request failed");
+        }
+        return response.json();
+      })
+      .then((response) => {
+        if (!response.items.length) {
           setShowModal(true);
-        });
+        }
+        else {
+          setAllVideo(response.items);
+          setShowModal(false);
+        }
+      })
+      .catch((error) => {
+        console.log(error);
+        setShowModal(true);
+      });
     }
     setSearch("");
   }
