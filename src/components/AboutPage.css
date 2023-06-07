@@ -8,7 +8,6 @@
 .about-title {
     margin-top: 70px;
     margin-bottom: 75px;
-    /* text-align: center; */
     font-size: 4.5em;
     font-weight: 300;
     font-stretch: extra-condensed;
@@ -17,6 +16,7 @@
     linear-gradient(90deg,mediumblue, lightblue);
     background-clip: text;
     color: transparent;
+    text-align: center;
 }
 
 span {
@@ -85,15 +85,16 @@ a:hover {
 
 @media (max-width : 1060px) {
     .credits {
-        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: center;
     }
     img {
         width: 200px;
         height: 250px;
     }
     .individual {
-        border: 2px solid #1976d2;
-        border-radius: 10px;
+        border-bottom: 2px solid #1976d2;
+        flex-wrap: wrap;
         padding: 20px 20px 5px 18px;
     }
 }

@@ -60,7 +60,7 @@ function AboutPage() {
                     <p className="person-links">Learn more about <span>Tee:</span><br/>
                         <a href="https://github.com/teegrg" target="_blank" rel="noreferrer"> Github</a> and
                         <a href="https://www.linkedin.com/in/tsheringgurungny/" target="_blank" rel="noreferrer"> LinkedIn</a>
-                    </p><br/><br/>
+                    </p><br/>
                     <img src={teeImg} alt="Tshering Gurung"/>
                 </div>
             </div>
@@ -80,4 +80,4 @@ function AboutPage() {
     );
 }
   
-  export default AboutPage;
+export default AboutPage;

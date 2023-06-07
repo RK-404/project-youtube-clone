@@ -30,8 +30,19 @@
     width: 200px;
 }
 
-@media (max-width: 1250px) {
-    .showVid-side {
-        display: none;
+@media (max-width: 1250px) {  
+    .showVid-main {
+      flex-direction: column; 
     }
-}
+  
+    .showVid {
+      width: 65% !important; 
+      height: auto !important; 
+      margin-left: 20px;
+    }
+
+    .showVid-title {
+        width: fit-content;
+    }
+  }
+  
