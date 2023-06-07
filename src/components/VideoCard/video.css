@@ -29,3 +29,9 @@
 .showVid-p {
     width: 200px;
 }
+
+@media (max-width: 850px) {
+    .showVid-side {
+        display: none;
+       }
+  }
