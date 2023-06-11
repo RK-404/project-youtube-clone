@@ -2,8 +2,6 @@
 
 ### **Here is our** 👉 [Trello Board](https://trello.com/b/ZlCqQspH/utube-lab-collaboration) 📋
 
-<br/>
-
 ### **Netlify Deployed App** 👉 [YouTube Clone](https://youtube-404.netlify.app/)
 
 <br/>
